@@ -1,9 +1,3 @@
-<%-- 
-    Document   : viewLost
-    Created on : 27 Jan 2026, 11:00:51 pm
-    Author     : dhruv
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="model.User" %>
 <%@ page import="java.util.ArrayList" %>
@@ -28,7 +22,6 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <h1>Lost &amp; Found Management System</h1>
     <div style="float:right;">
@@ -40,7 +33,7 @@
     </div>
 </div>
 
-<!-- CONTENT -->
+
 <div class="container">
     <h2>Lost Items</h2>
 
@@ -75,32 +68,10 @@
     </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
     &copy; 2026 Lost &amp; Found Management System
 </div>
 
 </body>
 </html>
-
-
-<%--<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="model.User" %>
-<%
-    User currentUser = (User) session.getAttribute("currentUser");
-    if(currentUser == null) {
-        response.sendRedirect("index.jsp");
-    }
-%>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>View Lost Items</title>
-</head>
-<body>
-    <h1>Lost Items</h1>
-    <a href="<%= currentUser.getRole().equalsIgnoreCase("admin") ? "adminDashboard.jsp" : "dashboard.jsp" %>">Back to Dashboard</a>
-</body>
-</html>--%>
-
 
