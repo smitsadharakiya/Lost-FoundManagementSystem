@@ -5,7 +5,7 @@ public class User {
     private int id;
     private String email;
     private String password;
-    private String role; // admin or student
+    private String role;
 
     public User() {
     }
@@ -42,3 +42,4 @@ public class User {
         this.role = role;
     }
 }
+
