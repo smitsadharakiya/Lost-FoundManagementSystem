@@ -16,24 +16,24 @@ public class LostItemServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
-        // Get form data (names MATCH JSP)
+
         String itemName = request.getParameter("itemName");
         String location = request.getParameter("location");
         String description = request.getParameter("description");
 
-        // Create model
+
         LostItem item = new LostItem();
         item.setItemName(itemName);
         item.setLocation(location);
         item.setDescription(description);
 
-        // ✅ SET DATE (VERY IMPORTANT)
+        
         item.setDate(new Date(System.currentTimeMillis()));
 
-        // Save to DB
+     
         LostItemDAO.save(item);
 
-        // ✅ Redirect to VIEW page (not dashboard)
         response.sendRedirect("viewLost.jsp");
     }
 }
+
