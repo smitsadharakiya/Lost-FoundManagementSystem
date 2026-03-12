@@ -9,7 +9,7 @@ import dao.DBConnection;
 
 public class LostItemDAO {
 
-    // INSERT
+  
     public static void save(LostItem item) {
         try {
             Connection con = DBConnection.getConnection();
@@ -27,7 +27,7 @@ public class LostItemDAO {
         }
     }
 
-    // SELECT
+ 
     public static ArrayList<LostItem> getAllLostItems() {
         ArrayList<LostItem> list = new ArrayList<>();
 
@@ -51,3 +51,4 @@ public class LostItemDAO {
         return list;
     }
 }
+
