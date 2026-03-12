@@ -1,9 +1,3 @@
-<%-- 
-    Document   : viewFound
-    Created on : 27 Jan 2026, 11:01:20 pm
-    Author     : dhruv
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="model.User" %>
 <%@ page import="model.FoundItem" %>
@@ -80,23 +74,3 @@
 </html>
 
 
-
-<%--<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="model.User" %>
-<%
-    User currentUser = (User) session.getAttribute("currentUser");
-    if(currentUser == null) {
-        response.sendRedirect("index.jsp");
-    }
-%>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>View Found Items</title>
-</head>
-<body>
-    <h1>Found Items</h1>
-    <!-- You can use JSTL or Servlet to fetch data from found_items table -->
-    <a href="<%= currentUser.getRole().equalsIgnoreCase("admin") ? "adminDashboard.jsp" : "dashboard.jsp" %>">Back to Dashboard</a>
-</body>
-</html>--%>
